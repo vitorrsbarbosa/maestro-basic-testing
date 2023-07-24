@@ -1,0 +1,12 @@
+appId: com.qazandoqafood
+name: Realiza pedido com 10 itens
+tags:
+  - success
+---
+- launchApp:
+    permissions: { all: allow }
+- runFlow: 'subflows/login.yaml'
+
+- runFlow: 'subflows/select-address.yaml'
+
+- runFlow: 'subflows/purchase-item.yaml'

@@ -1,0 +1,15 @@
+appId: com.qazandoqafood
+name: Login 2XX
+tags:
+  - success
+---
+- launchApp
+
+- runFlow: subflows/login.yaml
+
+- scrollUntilVisible:
+    element: 'Bulldog Hamburgueria'
+    direction: DOWN
+
+- assertVisible:
+    text: Bulldog Hamburgueria

@@ -1,0 +1,4 @@
+appId: com.qazandoqafood
+---
+- tapOn: "Selecione seu endereço..."
+- tapOn: "PERMITIR"
