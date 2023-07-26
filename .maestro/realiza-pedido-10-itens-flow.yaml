@@ -3,10 +3,18 @@ name: Realiza pedido com 10 itens
 tags:
   - success
 ---
-- launchApp:
-    permissions: { all: allow }
-- runFlow: 'subflows/login.yaml'
+- runFlow: elements/loadElements.yaml
+- launchApp
+- runFlow:
+    file: subflows/login.yaml
+    env:
+      USERNAME: 'teste@teste.com'
+      PASSWORD: '123456'
 
 - runFlow: 'subflows/select-address.yaml'
 
-- runFlow: 'subflows/purchase-item.yaml'
+- runFlow: 'subflows/select-item.yaml'
+
+- runFlow: 'subflows/addCupom.yaml'
+
+- runFlow: 'subflows/process-payment.yaml'

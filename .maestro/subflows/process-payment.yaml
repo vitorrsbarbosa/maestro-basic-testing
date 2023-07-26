@@ -1,0 +1,7 @@
+appId: com.qazandoqafood
+---
+- scrollUntilVisible:
+    element: 'Dinheiro'
+- tapOn: 'Dinheiro'
+- tapOn: ${output.purchasePage.finishOrder}
+- assertVisible: 'Pedido realizado'

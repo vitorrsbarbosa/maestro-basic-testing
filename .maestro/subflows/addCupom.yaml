@@ -1,0 +1,5 @@
+appId: com.qazandoqafood
+---
+- tapOn: ${output.itemPage.confirmItem}
+- inputText: 'CUPOM50'
+- tapOn: 'Adicionar'

@@ -3,16 +3,14 @@ name: Login 4XX
 tags:
   - error
 ---
+- runFlow: elements/loadElements.yaml
 - launchApp
 
-- assertVisible: 'login-button'
-- tapOn: 'email'
-- inputText: error@error.com
-- tapOn: 'password'
-- inputText: qwerty
-
-- hideKeyboard
-- tapOn: 'login-button'
+- runFlow:
+    file: subflows/login.yaml
+    env:
+      USERNAME: 'error@error.com'
+      PASSWORD: 'qwerty'
 
 - assertVisible: 'Erro ao realizar login'
 

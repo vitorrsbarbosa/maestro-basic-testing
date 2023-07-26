@@ -1,12 +1,9 @@
 appId: com.qazandoqafood
 ---
-- assertVisible: 'login-button'
-- tapOn: 'email'
-- inputText: 'teste@teste.com'
-- tapOn: 'password'
-- inputText: '123456'
+- tapOn: ${output.login.email}
+- inputText: ${USERNAME}
+- tapOn: ${output.login.password}
+- inputText: ${PASSWORD}
 
 - hideKeyboard
-- tapOn: 'login-button'
-
-- assertVisible: 'address-button'
+- tapOn: ${output.login.loginButton}

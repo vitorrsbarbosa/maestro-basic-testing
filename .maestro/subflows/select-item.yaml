@@ -1,0 +1,12 @@
+appId: com.qazandoqafood
+---
+- tapOn: ${output.homePage.store}
+
+- repeat:
+    times: 10
+    commands:
+      - tapOn:
+          point: '95%,55%'
+
+- assertVisible: ${output.itemPage.value}
+- tapOn: ${output.itemPage.selectItem}
