@@ -3,7 +3,7 @@ name: Login 2XX
 tags:
   - success
 ---
-- runFlow: elements/loadElements.yaml
+- runFlow: loadElements.yaml
 - launchApp
 
 - runFlow:

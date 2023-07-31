@@ -1,6 +1,0 @@
-appId: com.qazandoqafood
----
-- runScript: loginPage.js
-- runScript: homePage.js
-- runScript: itemPage.js
-- runScript: purchasePage.js

@@ -1,5 +1,6 @@
 output.itemPage = {
-  value: 'R$ 220,00',
-  selectItem: 'open-cart-button',
+  addItem: 'add-item-buttom',
+  cupomField: 'cupom-field',
+  openCart: 'open-cart-button',
   confirmItem: 'confirm-order-button'
 }

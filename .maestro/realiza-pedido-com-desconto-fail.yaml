@@ -1,5 +1,5 @@
 appId: com.qazandoqafood
-name: 'Realiza pedido com 10 itens'
+name: 'Solicita pedido com desconto'
 tags:
   - success
 ---
@@ -16,7 +16,12 @@ tags:
 - runFlow:
     file: 'subflows/select-item.yaml'
     env:
-      AMOUNT: 10
-      INDEX: 1
+      AMOUNT: 1
+      INDEX: 0
 
-- runFlow: 'subflows/process-payment.yaml'
+- runFlow:
+    file: 'subflows/addCupom.yaml'
+    env:
+      CUPOM: 'CUPOM+50'
+
+- assertVisible: ${output.purchasePage.invalidCupom}

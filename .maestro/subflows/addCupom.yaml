@@ -1,5 +1,6 @@
 appId: com.qazandoqafood
 ---
-- tapOn: ${output.itemPage.confirmItem}
-- inputText: 'CUPOM50'
-- tapOn: 'Adicionar'
+- tapOn: ${output.itemPage.cupomField}
+- inputText: ${CUPOM}
+- hideKeyboard
+- doubleTapOn: ${output.purchasePage.addCupom}

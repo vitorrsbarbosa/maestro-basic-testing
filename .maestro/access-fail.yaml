@@ -3,7 +3,7 @@ name: Login 4XX
 tags:
   - error
 ---
-- runFlow: elements/loadElements.yaml
+- runFlow: loadElements.yaml
 - launchApp
 
 - runFlow:

@@ -3,10 +3,11 @@ appId: com.qazandoqafood
 - tapOn: ${output.homePage.store}
 
 - repeat:
-    times: 10
+    times: ${AMOUNT}
     commands:
       - tapOn:
-          point: '95%,55%'
+          id: ${output.itemPage.addItem}
+          index: ${INDEX}
 
-- assertVisible: ${output.itemPage.value}
-- tapOn: ${output.itemPage.selectItem}
+- tapOn: ${output.itemPage.openCart}
+- tapOn: ${output.itemPage.confirmItem}
