@@ -3,13 +3,17 @@ name: Login 2XX
 tags:
   - success
 ---
+- runFlow: loadElements.yaml
 - launchApp
 
-- runFlow: subflows/login.yaml
+- runFlow:
+    file: subflows/login.yaml
+    env:
+      USERNAME: 'teste@teste.com'
+      PASSWORD: '123456'
 
 - scrollUntilVisible:
     element: 'Bulldog Hamburgueria'
-    direction: DOWN
 
 - assertVisible:
     text: Bulldog Hamburgueria

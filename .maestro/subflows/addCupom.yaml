@@ -1,0 +1,6 @@
+appId: com.qazandoqafood
+---
+- tapOn: ${output.itemPage.cupomField}
+- inputText: ${CUPOM}
+- hideKeyboard
+- doubleTapOn: ${output.purchasePage.addCupom}

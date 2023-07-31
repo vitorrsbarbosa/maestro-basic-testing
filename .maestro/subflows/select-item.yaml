@@ -1,0 +1,13 @@
+appId: com.qazandoqafood
+---
+- tapOn: ${output.homePage.store}
+
+- repeat:
+    times: ${AMOUNT}
+    commands:
+      - tapOn:
+          id: ${output.itemPage.addItem}
+          index: ${INDEX}
+
+- tapOn: ${output.itemPage.openCart}
+- tapOn: ${output.itemPage.confirmItem}
