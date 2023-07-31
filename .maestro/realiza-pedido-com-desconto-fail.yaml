@@ -1,5 +1,5 @@
 appId: com.qazandoqafood
-name: 'Solicita pedido com desconto'
+name: 'Solicita pedido usando CUPOM inválido'
 tags:
   - success
 ---
